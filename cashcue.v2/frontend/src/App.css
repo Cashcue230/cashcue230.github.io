@@ -1,0 +1,556 @@
+/* CashCue Dark Theme Styles */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
+
+:root {
+  /* Backgrounds - Dark Theme Foundation */
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --bg-overlay: rgba(255, 255, 255, 0.1);
+
+  /* Text - High Contrast for Dark Theme */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-muted: #4D4D4D;
+
+  /* Borders - Subtle Dark Theme */
+  --border-subtle: rgba(255, 255, 255, 0.25);
+  --border-medium: rgba(255, 255, 255, 0.4);
+
+  /* MAIN ACCENT COLORS - Brand Colors Only */
+  --brand-primary: #00FFD1;
+  --brand-hover: rgba(0, 255, 209, 0.1);
+  --brand-active: #6FD2C0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography Scale - High Contrast Dark Theme */
+.display-huge {
+  font-size: 66px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.62px;
+  color: var(--text-primary);
+}
+
+.display-large {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.display-medium {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.heading-1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.heading-3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.body-medium {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+.body-small {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+.body-muted {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--brand-primary);
+  color: #000000;
+  border: none;
+  border-radius: 0px;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  min-height: 56px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.btn-primary:hover {
+  background: var(--brand-hover);
+  color: var(--brand-primary);
+  transform: scale(1.02);
+}
+
+.btn-primary:active {
+  background: var(--brand-active);
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0px;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  min-height: 56px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.btn-secondary:hover {
+  background: #FFFFFF;
+  color: #000000;
+  transform: scale(1.02);
+}
+
+.btn-secondary:active {
+  background: #F0F0F0;
+  transform: scale(0.98);
+}
+
+/* Dark Container */
+.dark-container {
+  background: var(--bg-primary);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Dark Grid */
+.dark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 60px 40px;
+  padding: 60px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Spacing System */
+.space-large {
+  margin: 60px;
+}
+
+.space-xlarge {
+  margin: 100px;
+}
+
+.space-xxlarge {
+  margin: 160px;
+}
+
+.pad-large {
+  padding: 60px;
+}
+
+.pad-xlarge {
+  padding: 100px;
+}
+
+.pad-xxlarge {
+  padding: 160px;
+}
+
+/* Dark Transitions */
+.dark-transition {
+  transition: all 0.4s ease-in-out;
+}
+
+.dark-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 255, 209, 0.2);
+}
+
+/* Floating Button */
+.floating-hire-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: var(--brand-primary);
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 255, 209, 0.4);
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.floating-hire-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 255, 209, 0.6);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 32px rgba(0, 255, 209, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 255, 209, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 255, 209, 0.4);
+  }
+}
+
+/* Responsive Design - Mobile Only (Android/iPhone) */
+@media (max-width: 768px) {
+  .display-huge {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .display-large {
+    font-size: 36px;
+  }
+
+  .display-medium {
+    font-size: 28px;
+  }
+
+  .dark-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .floating-hire-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-huge {
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Social icons - Available on all devices */
+.social-icons-mobile {
+  gap: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure social icons are visible */
+.social-icons-mobile a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-icons-mobile a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons-mobile svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile-specific improvements for Android/iPhone */
+@media (max-width: 640px) {
+
+  /* Ensure proper touch targets */
+  .btn-primary,
+  .btn-secondary {
+    min-height: 48px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Better spacing for mobile */
+  .dark-container {
+    padding: 0 16px;
+  }
+
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    padding: 16px;
+  }
+
+  /* Social icons mobile optimization */
+  .social-icons-mobile {
+    gap: 8px;
+    padding: 8px;
+  }
+}
+
+/* Page padding for fixed header */
+.page-padding {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .page-padding {
+    padding-top: 60px;
+  }
+}
+
+/* Ensure desktop styles are preserved */
+@media (min-width: 1024px) {
+  .display-huge {
+    font-size: 66px;
+  }
+
+  .display-large {
+    font-size: 48px;
+  }
+
+  .display-medium {
+    font-size: 32px;
+  }
+
+  .dark-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 60px 40px;
+    padding: 60px 0;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-active);
+}
+
+/* Watch-specific optimizations (162x197) */
+@media (max-width: 200px) {
+
+  /* Scale down all typography significantly */
+  .display-huge {
+    font-size: 24px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .display-large {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+  }
+
+  .display-medium {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+  }
+
+  .heading-1,
+  .heading-2,
+  .heading-3 {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  .body-large {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  .body-medium,
+  .body-small,
+  .body-muted {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Compact layout */
+  .dark-grid {
+    gap: 24px !important;
+    padding: 24px 0 !important;
+  }
+
+  .dark-container {
+    padding: 0 8px !important;
+  }
+
+  .pad-large,
+  .pad-xlarge,
+  .pad-xxlarge,
+  .space-large,
+  .space-xlarge,
+  .space-xxlarge {
+    padding: 20px !important;
+    margin: 20px !important;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    min-height: 36px !important;
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    width: 100% !important;
+    /* Full width on watch */
+  }
+
+  /* Floating button needs to be tiny */
+  .floating-hire-btn {
+    bottom: 10px !important;
+    right: 10px !important;
+    padding: 8px 12px !important;
+    font-size: 10px !important;
+    width: auto !important;
+  }
+
+  /* GLOBAL PAGE FIXES */
+  /* Force single column everywhere */
+  .grid,
+  .grid-cols-1,
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .lg\:grid-cols-2,
+  .md\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Reduce massive sections padding */
+  .py-20,
+  .py-16,
+  .py-12 {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .mb-16,
+  .mb-20,
+  .mb-12 {
+    margin-bottom: 24px !important;
+  }
+
+  .gap-16,
+  .gap-12 {
+    gap: 16px !important;
+  }
+
+  /* Form Elements scale down */
+  input,
+  textarea,
+  select {
+    padding: 8px !important;
+    font-size: 12px !important;
+    min-height: 32px !important;
+  }
+
+  /* Sections specific fixes */
+  .bg-gray-900\/30.p-8,
+  .bg-gray-900\/20.p-12 {
+    padding: 16px !important;
+  }
+
+  /* Reduce Navbar height to 50px */
+  header {
+    height: 50px !important;
+  }
+  
+  /* Adjust page padding for smaller header */
+  .dark-container {
+    padding-top: 50px !important;
+  }
+}
